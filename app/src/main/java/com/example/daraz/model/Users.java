@@ -2,47 +2,57 @@ package com.example.daraz.model;
 
 public class Users {
 
-    private String FullName;
-    private String Email;
-    private String PhoneNo;
-    private String Password;
+    private String fullName;
+    private String email;
+    private String phoneNo;
+    private String password;
+    private String smsCode;
 
-    public Users(String fullName, String email, String phoneNo, String password) {
-        FullName = fullName;
-        Email = email;
-        PhoneNo = phoneNo;
-        Password = password;
+    public Users(String fullName, String email, String password, String phoneNo, String smsCode) {
+        this.fullName = fullName;
+        this.email = email;
+        this.phoneNo = phoneNo;
+        this.password = password;
+        this.smsCode = smsCode;
     }
 
     public String getFullName() {
-        return FullName;
+        return fullName;
     }
 
     public void setFullName(String fullName) {
-        FullName = fullName;
+        this.fullName = fullName;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPhoneNo() {
-        return PhoneNo;
+        return phoneNo;
     }
 
     public void setPhoneNo(String phoneNo) {
-        PhoneNo = phoneNo;
+        this.phoneNo = phoneNo;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
+    }
+
+    public String getSmsCode() {
+        return smsCode;
+    }
+
+    public void setSmsCode(String smsCode) {
+        this.smsCode = smsCode;
     }
 }
