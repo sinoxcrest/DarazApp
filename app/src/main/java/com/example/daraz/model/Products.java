@@ -2,37 +2,37 @@ package com.example.daraz.model;
 
 public class Products {
 
-    private String Description;
-    private int Image;
-    private float Price;
+    private String productName;
+    private String productImage;
+    private String price;
 
-    public Products( int image,String description, float price) {
-        Description = description;
-        Image = image;
-        Price = price;
+    public Products(String productName, String productImage, String price) {
+        this.productName = productName;
+        this.productImage = productImage;
+        this.price = price;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public int getImage() {
-        return Image;
+    public String getProductImage() {
+        return productImage;
     }
 
-    public void setImage(int image) {
-        Image = image;
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
     }
 
-    public float getPrice() {
-        return Price;
+    public String getPrice() {
+        return price;
     }
 
-    public void setPrice(float price) {
-        Price = price;
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
