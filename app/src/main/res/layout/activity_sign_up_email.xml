@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".SignUpEmailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="320dp"
+        android:layout_height="370dp"
+        android:layout_gravity="center"
+        android:layout_margin="100dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="Full Name"
+            ></TextView>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etFullName"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="text"
+            app:met_errorColor="#FF3A00"
+            android:textSize="20dp"
+            android:hint="Enter your name here"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="Email"></TextView>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="textEmailAddress"
+            app:met_errorColor="#FF3A00"
+            android:textSize="20dp"
+            android:hint="Enter your email here"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="Password"></TextView>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword"
+            app:met_errorColor="#FF3A00"
+            android:textSize="20dp"
+            android:hint="Enter your password here"></com.rengwuxian.materialedittext.MaterialEditText>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp">
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to Daraz's Term of Uses and Privacy Policy"
+                android:layout_toEndOf="@+id/checkbox"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="10dp"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnsubmit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:text="Submit"
+            android:textColor="#ffffff"
+            android:background="@drawable/btncreatebg"
+            android:textSize="20dp"></Button>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create an Account"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/btncreatebg"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/btncreateAcc"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#FF5722"
+        android:textSize="20dp"
+        android:background="@drawable/bglogin"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:id="@+id/btnLogin"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect with Other Ways"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"></TextView>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:layout_marginTop="10dp"
+        android:columnCount="2">
+
+        <Button
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:drawableLeft="@drawable/facebook"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@drawable/btnfb"
+            android:layout_marginRight="10dp"
+            android:text="Facebook"></Button>
+
+        <Button
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:drawableLeft="@drawable/google"
+            android:textAllCaps="false"
+            android:background="@drawable/btngoogle"
+            android:textColor="#000000"
+            android:text="Google"></Button>
+
+    </GridLayout>
+
+
+</LinearLayout>
