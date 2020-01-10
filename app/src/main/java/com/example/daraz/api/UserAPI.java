@@ -22,6 +22,5 @@ public interface UserAPI {
     @POST("users/login")
     Call<SignUpResponse> checkUser(@Field("email") String email, @Field("password") String password);
 
-    @GET("users/me")
-    Call<Users> getUserDetails(@Header("Authorization") String token);
+
 }
