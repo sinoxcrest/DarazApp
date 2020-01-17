@@ -3,10 +3,10 @@ package com.example.daraz.model;
 public class Products {
 
     private String Description;
-    private int Image;
+    private String Image;
     private float Price;
 
-    public Products( int image,String description, float price) {
+    public Products( String image,String description, float price) {
         Description = description;
         Image = image;
         Price = price;
@@ -20,11 +20,11 @@ public class Products {
         Description = description;
     }
 
-    public int getImage() {
+    public String getImage() {
         return Image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         Image = image;
     }
 

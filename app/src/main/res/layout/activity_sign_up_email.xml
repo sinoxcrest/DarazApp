@@ -29,8 +29,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="20dp"
-            android:text="Full Name"
-            ></TextView>
+            android:text="Full Name"></TextView>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/etFullName"
@@ -42,8 +41,7 @@
             android:layout_marginBottom="20dp"
             android:inputType="text"
             app:met_errorColor="#FF3A00"
-            android:textSize="20dp"
-            android:hint="Enter your name here"></com.rengwuxian.materialedittext.MaterialEditText>
+            android:textSize="20dp"></com.rengwuxian.materialedittext.MaterialEditText>
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,6 +53,7 @@
             android:text="Email"></TextView>
 
         <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etemail"
             android:layout_width="285dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -63,8 +62,7 @@
             android:layout_marginBottom="20dp"
             android:inputType="textEmailAddress"
             app:met_errorColor="#FF3A00"
-            android:textSize="20dp"
-            android:hint="Enter your email here"></com.rengwuxian.materialedittext.MaterialEditText>
+            android:textSize="20dp"></com.rengwuxian.materialedittext.MaterialEditText>
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,6 +74,7 @@
             android:text="Password"></TextView>
 
         <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etpassword"
             android:layout_width="285dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -84,8 +83,7 @@
             android:layout_marginBottom="20dp"
             android:inputType="textPassword"
             app:met_errorColor="#FF3A00"
-            android:textSize="20dp"
-            android:hint="Enter your password here"></com.rengwuxian.materialedittext.MaterialEditText>
+            android:textSize="20dp"></com.rengwuxian.materialedittext.MaterialEditText>
 
 
         <RelativeLayout

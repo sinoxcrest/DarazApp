@@ -27,13 +27,11 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
         PhoneNo = findViewById(R.id.etNo);
         btnNext = findViewById(R.id.btnNext);
         tvL = findViewById(R.id.tvL);
         SMS = findViewById(R.id.etsms);
         btnSend = findViewById(R.id.button2);
-        btn1=findViewById(R.id.button);
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +72,12 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
                 Intent intent = new Intent(SignUpActivity.this, SignUpEmailActivity.class);
+                String No = PhoneNo.getText().toString();
+                String sms = SMS.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("PhoneNo", No);
+                bundle.putString("SMS", sms);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -86,12 +90,5 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-btn1.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(SignUpActivity.this, SignUpEmailActivity.class);
-        startActivity(intent);
-    }
-});
     }
 }

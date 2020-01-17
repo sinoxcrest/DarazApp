@@ -51,39 +51,30 @@ public class HomeFragment extends Fragment {
         sliderView.setIndicatorUnselectedColor(Color.GRAY);
         sliderView.startAutoCycle();
 
-        List<Products> productsList = new ArrayList<>();
-        productsList.add(new Products(R.drawable.t1, "Black Tuxedo", 1000));
-        productsList.add(new Products(R.drawable.t4, "Light Blue suit", 1400));
-        productsList.add(new Products(R.drawable.t3, "Grey Tuxedo", 1000));
-        productsList.add(new Products(R.drawable.t6, "Salwar", 1200));
-        productsList.add(new Products(R.drawable.t4, "Light Blue suit", 1400));
-        productsList.add(new Products(R.drawable.t6, "Salwar", 1200));
 
 
-        final productadapter productadapters = new productadapter(getContext(), productsList);
-        recyclerView.setAdapter(productadapters);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+
      getProduct();
         return view;
     }
 
 
     private void getProduct() {
-        ItemAPI itemApi = Url.getInstance().create(ItemAPI.class);
-        Call<List<Products>> listCall = itemApi.getProduct();
+        ItemAPI productApi= Url.getInstance().create(ItemAPI.class);
+        Call<List<Products>> listCall= productApi.getProduct();
         listCall.enqueue(new Callback<List<Products>>() {
             @Override
             public void onResponse(Call<List<Products>> call, Response<List<Products>> response) {
 
-                if (!response.isSuccessful()) {
+                if(!response.isSuccessful()){
                     Toast.makeText(getContext(), "Toast " + response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                productadapter productAdapter = new productadapter(getActivity(), response.body());
-                recyclerView.setAdapter(productAdapter);
+                productadapter productadapter=new productadapter(getActivity(),response.body());
+                recyclerView.setAdapter(productadapter);
                 recyclerView.setHasFixedSize(true);
-                recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-                productAdapter.notifyDataSetChanged();
+                recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+                productadapter.notifyDataSetChanged();
             }
 
             @Override
